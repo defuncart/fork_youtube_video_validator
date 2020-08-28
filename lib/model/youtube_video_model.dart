@@ -32,7 +32,7 @@ class YoutubeVideo {
     views = int.tryParse(json['viewCount']);
     channelID = json['channelId'];
     author = json['author'].toString().replaceAll('+', ' ');
-    description = json['viewCount'];
+    description = json['shortDescription'].toString().replaceAll('+', ' ');
     tags = json['keywords'].toString().replaceAll('+', ' ');
     thubmnail = json['thumbnail']['thumbnails'][4]['url'].toString();
     rating = json['averageRating'];
